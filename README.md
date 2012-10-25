@@ -43,6 +43,5 @@ Function un.onGUIEnd
     !insertmacro MixPanel "YOUR_TOKEN" "Uninstall" "Ended"
 FunctionEnd
 ```
-This script requires the use of inetc and base64 plugins.
-http://nsis.sourceforge.net/Inetc_plug-in
-https://github.com/nmoinvaz/nsis-base64
+This script requires the use of [inetc](http://nsis.sourceforge.net/Inetc_plug-in) and [base64](https://github.com/nmoinvaz/nsis-base64) plugins.
+
