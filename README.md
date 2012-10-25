@@ -11,36 +11,36 @@ Specify the include at the top of your nsh script:
 To track an event use the following
 
 ```
-!insertmacro MixPanel "YOUR_TOKEN" "Event" "Action"
+!insertmacro MixPanelAnalytics "YOUR_TOKEN" "Event" "Action"
 ```
 
 Example events to track:
 
 ```
 Function .onInit
-    !insertmacro MixPanel "YOUR_TOKEN" "Install" "Started"
+    !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Install" "Started"
 FunctionEnd
 Function .onInstFailed
-    !insertmacro MixPanel "YOUR_TOKEN" "Install" "Failed"
+    !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Install" "Failed"
 FunctionEnd
 Function .onInstSuccess
-    !insertmacro MixPanel "YOUR_TOKEN" "Install" "Success"
+    !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Install" "Success"
 FunctionEnd
 Function .onGUIEnd
-    !insertmacro MixPanel "YOUR_TOKEN" "Install" "Ended"
+    !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Install" "Ended"
 FunctionEnd
 
 Function un.onInit
-    !insertmacro MixPanel "YOUR_TOKEN" "Uninstall" "Started"
+    !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Uninstall" "Started"
 FunctionEnd
 Function un.onUninstFailed
-    !insertmacro MixPanel "YOUR_TOKEN" "Uninstall" "Failed"
+    !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Uninstall" "Failed"
 FunctionEnd
 Function un.onUninstSuccess
-    !insertmacro MixPanel "YOUR_TOKEN" "Uninstall" "Success"
+    !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Uninstall" "Success"
 FunctionEnd
 Function un.onGUIEnd
-    !insertmacro MixPanel "YOUR_TOKEN" "Uninstall" "Ended"
+    !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Uninstall" "Ended"
 FunctionEnd
 ```
 This script requires the use of [inetc](http://nsis.sourceforge.net/Inetc_plug-in) and [base64](https://github.com/nmoinvaz/nsis-base64) plugins.

@@ -1,5 +1,5 @@
 Var MpVisitorId
-!macro MixPanel Account Event Action
+!macro MixPanelAnalytics Account Event Action
     Push $0
     Push $1
     Push $2
