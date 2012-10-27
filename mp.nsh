@@ -59,27 +59,23 @@ Var MpVisitorId
     Push $2
     Push $3
     Push $4
-    Push $5
-    Push $6
-    !insertmacro MixPanelGetUnixTime
-    StrCpy $6 $0
     ${If} $MpVisitorId == ""
         !insertmacro MixPanelGuid
         StrCpy $MpVisitorId $0
     ${EndIf}
     !insertmacro MixPanelGetLocale
-    StrCpy $5 $0
+    StrCpy $4 $0
+    !insertmacro MixPanelGetUnixTime
+    StrCpy $3 $0
     !insertmacro MixPanelGetUserAgent
     StrCpy $1 "{ $\"event$\": $\"${Event}$\", $\"properties$\": { $\"distinct_id$\": $\"0x$MpVisitorId$\","
-    StrCpy $1 "$1 $\"token$\": $\"${Account}$\", $\"time$\": $\"$6$\", $\"action$\": $\"${Action}$\" } }"
+    StrCpy $1 "$1 $\"token$\": $\"${Account}$\", $\"time$\": $\"$3$\", $\"action$\": $\"${Action}$\" } }"
     base64::Encode $1
     Pop $1
     StrCpy $1 "http://api.mixpanel.com/track/?data=$1"
     GetTempFileName $2
-    inetc::get /SILENT /CONNECTTIMEOUT 5 /HEADER "Accept-Language: $5" /USERAGENT $0 /RECEIVETIMEOUT 5 $1 $2 /END
+    inetc::get /SILENT /CONNECTTIMEOUT 5 /HEADER "Accept-Language: $4" /USERAGENT $0 /RECEIVETIMEOUT 5 $1 $2 /END
     Delete $2
-    Pop $6
-    Pop $5  
     Pop $4
     Pop $3
     Pop $2
