@@ -43,5 +43,5 @@ Function un.onGUIEnd
     !insertmacro MixPanelAnalytics "YOUR_TOKEN" "Uninstall" "Ended"
 FunctionEnd
 ```
-This script requires the use of [LogicLib](http://nsis.sourceforge.net/LogicLib) and [inetc](http://nsis.sourceforge.net/Inetc_plug-in) and [base64](https://github.com/nmoinvaz/nsis-base64) plugins. Tested only with the non-Unicode version of NSIS.
+This script requires the use of [logiclib](http://nsis.sourceforge.net/LogicLib) script and [inetc](http://nsis.sourceforge.net/Inetc_plug-in) and [base64](https://github.com/nmoinvaz/nsis-base64) plugins. Tested only with the non-Unicode version of NSIS.
 
